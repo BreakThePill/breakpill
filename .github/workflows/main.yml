@@ -22,10 +22,12 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: CI=false npm run build   # 👈 empêche les warnings de bloquer
+        run: CI=false npm run build
 
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          path: ./build
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: actions/deploy-pages@v4
