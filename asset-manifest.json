@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/breakpill/static/css/main.cf00f191.css",
+    "main.js": "/breakpill/static/js/main.89d23a40.js",
+    "static/media/logo.png": "/breakpill/static/media/logo.d248403d4c9d5a7e23cc.png",
+    "static/media/eth.png": "/breakpill/static/media/eth.953189c51c49dcbfe8f8.png",
+    "static/media/mouse.png": "/breakpill/static/media/mouse.1c61271026f9a726e953.png",
+    "index.html": "/breakpill/index.html",
+    "main.cf00f191.css.map": "/breakpill/static/css/main.cf00f191.css.map",
+    "main.89d23a40.js.map": "/breakpill/static/js/main.89d23a40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf00f191.css",
+    "static/js/main.89d23a40.js"
+  ]
+}
