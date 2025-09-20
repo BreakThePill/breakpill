@@ -59,6 +59,10 @@
           margin-left: 50%;
           transform: translateX(-50%);
         }
+        @media (max-width: 446px) {
+          width: 50px;
+          height: 50px;
+        }
       }
       .right {
         .title {
@@ -68,6 +72,9 @@
           @media (max-width: 600px) {
             font-size: 1.9rem;
             margin-top: 15px;
+          }
+          @media (max-width: 446px) {
+            font-size: 1.2rem;
           }
         }
         p {
@@ -137,6 +144,9 @@
             margin-bottom: 5px;
           }
           p {
+            @media (max-width: 1189px) {
+              font-size: 0.7rem;
+            }
             @media (max-width: 600px) {
               font-size: 0.67rem;
             }
@@ -206,6 +216,9 @@
               background: #1a1a1a;
               color: #ffffff66;
               font-size: 16px;
+              @media (max-width: 368px) {
+                font-size: 10px;
+              }
             }
             .btn {
               font-family: "Chewy", system-ui;
