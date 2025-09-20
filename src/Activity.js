@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import "./activity.scss";
 import abi from "./abi.json";
 
-const CONTRACT_ADDRESS = "0xc58545D2Cd9Cad0aE68CD5F5395bD684351C3237";
+const CONTRACT_ADDRESS = "0xbf2CfD0c6b0A96e84ED1Ae5630BE0Fbdd1E2A763";
 
 const Activity = () => {
   const [events, setEvents] = useState([]);
