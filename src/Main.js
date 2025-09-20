@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import abi from "./abi.json";
 import App from "./App";
 
-// ---- Adresse unique ici ----
+
 const CONTRACT_ADDRESS = "0xbf2CfD0c6b0A96e84ED1Ae5630BE0Fbdd1E2A763";
 const ARB_HEX = "0xa4b1";
 const ARB_DEC = 42161n;
