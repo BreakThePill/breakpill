@@ -136,6 +136,11 @@
             border-bottom: 1px solid black;
             margin-bottom: 5px;
           }
+          p {
+            @media (max-width: 600px) {
+              font-size: 0.67rem;
+            }
+          }
           span {
             font-weight: bold;
           }
