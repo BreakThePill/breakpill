@@ -300,7 +300,7 @@ function App({
       <div className="top">
         <div
           className="break"
-          onClick={() => (window.location.href = "https://pump.fun/board")}
+          onClick={() => (window.location.href = "https://pump.fun/coin/ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump")}
           style={{ cursor: "pointer" }}
         >
           <h2>Buy $break</h2>
