@@ -136,7 +136,7 @@ const Main = () => {
         walletAddress={walletAddress}
         signer={signer}
         contract={contract}
-        contractAddress={CONTRACT_ADDRESS} // 👉 centralisé ici
+        contractAddress={CONTRACT_ADDRESS}
       />
     </>
   );
