@@ -352,8 +352,7 @@ function App({
                   {" "}
                   I will add back 100% of the creator fees for every +200k
                   increment
-                </span>{" "}
-                <span> up to...</span>
+                </span>
               </p>
             </div>
             <div className="pills" id="pillb">
