@@ -76,7 +76,7 @@ const Activity = ({ contractAddress }) => {
     };
 
     fetchEvents();
-    const interval = setInterval(fetchEvents, 10000); // toutes les 10s
+    const interval = setInterval(fetchEvents, 10000);
 
     return () => clearInterval(interval);
   }, [contractAddress]);
