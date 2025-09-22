@@ -15,7 +15,7 @@ const Activity = ({ contractAddress }) => {
     const fetchEvents = async () => {
       try {
         const latestBlock = await provider.getBlockNumber();
-        const fromBlock = latestBlock - 5000;
+        const fromBlock = 381802711;
 
         const depositEvents = await contract.queryFilter(
           "Deposited",
