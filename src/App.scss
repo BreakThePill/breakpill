@@ -148,6 +148,9 @@
             border-bottom: 1px solid black;
             margin-bottom: 5px;
             margin-top: 0;
+            width: 70%;
+            transform: translateX(-50%);
+            margin-left: 50%;
           }
           p {
             display: flex;
@@ -174,6 +177,7 @@
           z-index: 10;
           rotate: -3deg;
           background: #ebebeb;
+          box-shadow: -5px -10px 45px white;
           border-radius: 50% 50% 10px 10px;
           top: 10px;
           width: 62%;
@@ -183,8 +187,10 @@
           }
         }
         #pillb {
+          background-size: cover;
           rotate: 3deg;
           background: #4ca472;
+          box-shadow: 5px 10px 45px #4ca472;
           margin-left: 27%;
           border-radius: 10px 10px 50% 50%;
           @media (max-width: 600px) {
@@ -379,6 +385,7 @@
   }
   70% {
     transform: rotate(0deg);
+    box-shadow: -5px -10px 25px white;
   }
 }
 
@@ -394,6 +401,7 @@
   }
   70% {
     transform: rotate(0deg);
+    box-shadow: 5px 10px 25px #4ca472;
   }
 }
 #pilla {
