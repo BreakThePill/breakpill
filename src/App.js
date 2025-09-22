@@ -501,9 +501,8 @@ function App({
                 </p>
               </span>
 
-              <div className="activity">
-                <Activity contractAddress={contractAddress} />
-              </div>
+              <Activity contractAddress={contractAddress} />
+
               <span></span>
             </div>
           </div>
