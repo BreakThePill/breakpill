@@ -338,36 +338,48 @@ function App({
             <div className="pills" id="pilla">
               <h2>200K marketcap</h2>
               <p>
-                I will permanently lock 100% of the pump.fun creator rewards as
-                a creator by clicking on the "tip the pill" button. <br />
-                <br />
-                The only way for you (and me lol) to get this money back will be
-                to lock ETH in this contract so that we can share these funds
-                proportionally. <br />
-                <br />I will add back 100% of the creator fees for every +200k
-                increment <br /> up to...
+                {" "}
+                <span>
+                  I will permanently lock 100% of the pump.fun creator rewards
+                  as a creator by clicking on the "tip the pill" button.{" "}
+                </span>
+                <span>
+                  The only way for you (and me lol) to get this money back will
+                  be to lock ETH in this contract so that we can share these
+                  funds proportionally.
+                </span>
+                <span>
+                  {" "}
+                  I will add back 100% of the creator fees for every +200k
+                  increment
+                </span>{" "}
+                <span> up to...</span>
               </p>
             </div>
             <div className="pills" id="pillb">
               <h2>3M marketcap</h2>
               <p>
-                I launch a live pump.fun and open withdrawals for 2 days (I
-                can't cheat, it's written in the smart contract). <br />
-                Those who have withdrawn their deposits during these 2 days will
-                share 100% of the creator fees. <br />
-                <br />
-                The smart contract will then allow me to launch a second round,
-                the market cap targets will be voted on Twitter{" "}
-                <span
-                  onClick={() =>
-                    (window.location.href = "https://x.com/BreakThePill")
-                  }
-                  style={{ cursor: "pointer" }}
-                >
-                  {" "}
-                  (@BreakThePill)
-                </span>{" "}
-                .
+                <span>
+                  I launch a live pump.fun and open withdrawals for 2 days (I
+                  can't cheat, it's written in the smart contract).
+                </span>
+                <span>
+                  Those who have withdrawn their deposits during these 2 days
+                  will share 100% of the creator fees.
+                </span>
+                <span>
+                  The smart contract will then allow me to launch a second
+                  round, the market cap targets will be voted on Twitter{" "}
+                  <span
+                    onClick={() =>
+                      (window.location.href = "https://x.com/BreakThePill")
+                    }
+                    style={{ cursor: "pointer" }}
+                  >
+                    {" "}
+                    (@BreakThePill)
+                  </span>{" "}
+                </span>
               </p>
             </div>
           </div>
