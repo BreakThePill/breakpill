@@ -3,19 +3,17 @@ import { ethers } from "ethers";
 import "./activity.scss";
 import abi from "./abi.json";
 
-const CONTRACT_ADDRESS = "0xbf2CfD0c6b0A96e84ED1Ae5630BE0Fbdd1E2A763";
-
-const Activity = () => {
+const Activity = ({ contractAddress }) => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    let interval;
+    if (!contractAddress) return;
+
+    const provider = new ethers.JsonRpcProvider("https://arb1.arbitrum.io/rpc");
+    const contract = new ethers.Contract(contractAddress, abi, provider);
 
     const fetchEvents = async () => {
       try {
-        const provider = new ethers.BrowserProvider(window.ethereum);
-        const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, provider);
-
         const latestBlock = await provider.getBlockNumber();
         const fromBlock = latestBlock - 5000;
 
@@ -40,7 +38,8 @@ const Activity = () => {
           latestBlock
         );
 
-        const formatAddr = (addr) => addr.slice(0, 6) + "..." + addr.slice(-4);
+        const formatAddr = (addr) =>
+          addr ? addr.slice(0, 6) + "..." + addr.slice(-4) : "";
 
         const allEvents = [
           ...depositEvents.map((e) => ({
@@ -76,15 +75,11 @@ const Activity = () => {
       }
     };
 
-    fetchEvents(); // Appel initial
-
-    // 🔁 Toutes les 10 secondes
-    interval = setInterval(() => {
-      fetchEvents();
-    }, 1000);
+    fetchEvents();
+    const interval = setInterval(fetchEvents, 10000); // toutes les 10s
 
     return () => clearInterval(interval);
-  }, []);
+  }, [contractAddress]);
 
   return (
     <div className="activity">
@@ -95,7 +90,7 @@ const Activity = () => {
         ) : (
           events.map((e, idx) => (
             <li key={idx}>
-              {e.type}: {e.amount} ETH / Address: {e.address}
+              {e.type}: {Number(e.amount).toFixed(4)} ETH / Address: {e.address}
             </li>
           ))
         )}
