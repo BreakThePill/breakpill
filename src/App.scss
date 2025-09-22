@@ -48,6 +48,7 @@
 
     .center {
       display: flex;
+      justify-content: center;
       width: 50%;
       border-bottom: 1px solid #5fc98d;
       @media (max-width: 600px) {
@@ -69,7 +70,7 @@
       }
       .right {
         .title {
-          font-size: 3.5rem;
+          font-size: 3rem;
           font-family: "Fontdiner Swanky", serif;
           margin: 0;
           @media (max-width: 600px) {
@@ -83,7 +84,7 @@
         p {
           margin: 0;
           font-family: "Fontdiner Swanky", serif;
-          font-size: 2rem;
+          font-size: 1.5rem;
           @media (max-width: 600px) {
             font-size: 0.9rem;
           }
@@ -116,9 +117,10 @@
   .App {
     position: relative;
     font-family: "Chewy", system-ui;
-    margin-top: 30px;
+    margin-top: 40px;
     .flex-app {
       display: flex;
+      justify-content: space-around;
       @media (max-width: 600px) {
         flex-direction: column-reverse;
       }
@@ -131,10 +133,10 @@
         }
 
         .pills {
-          border: 7px solid #14423d;
+          border: 5px solid #14423d;
           padding: 20px;
-          height: 295px;
-          width: 55%;
+          height: 255px;
+          width: 60%;
           margin-left: 25%;
           text-align: center;
           @media (max-width: 600px) {
@@ -147,6 +149,12 @@
             margin-bottom: 5px;
           }
           p {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9rem;
+            span {
+              margin-top: 10px;
+            }
             @media (max-width: 1189px) {
               font-size: 0.7rem;
             }
@@ -154,6 +162,7 @@
               font-size: 0.67rem;
             }
           }
+
           span {
             font-weight: bold;
           }
@@ -165,12 +174,9 @@
           background: #ebebeb;
           border-radius: 50% 50% 10px 10px;
           top: 10px;
-          width: 57%;
+          width: 62%;
           @media (max-width: 600px) {
             width: 53%;
-          }
-          p {
-            border-right: 1px solid black;
           }
         }
         #pillb {
@@ -204,7 +210,7 @@
             border-radius: 30px;
             background: #1e2736;
             position: relative;
-            height: 90px;
+            height: 70px;
             margin: 5px;
 
             .value,
@@ -257,7 +263,7 @@
             display: flex;
             align-items: center;
             border-radius: 15px;
-            height: 65px;
+            height: 55px;
             background: #59719a91;
 
             .instr {
