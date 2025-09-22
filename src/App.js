@@ -302,12 +302,12 @@ function App({
           className="break"
           onClick={() =>
             (window.location.href =
-              "https://pump.fun/board")
+              "https://pump.fun/coin/ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump")
           }
           style={{ cursor: "pointer" }}
         >
           <h2>Buy $break</h2>
-          <p>IciFaudraMettreLeContractDuTokenpump</p>
+          <p>ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump</p>
           <img id="mouse" src={mouse} alt="mouse" />
         </div>
         <div className="center">
@@ -335,51 +335,53 @@ function App({
       <div className="App">
         <div className="flex-app">
           <div className="flex-pill">
-            <div className="pills" id="pilla">
-              <h2>200K marketcap</h2>
-              <p>
-                {" "}
-                <span>
-                  I will permanently lock 100% of the pump.fun creator rewards
-                  as a creator by clicking on the "tip the pill" button.{" "}
-                </span>
-                <span>
-                  The only way for you (and me lol) to get this money back will
-                  be to lock ETH in this contract so that we can share these
-                  funds proportionally.
-                </span>
-                <span>
+            <div className="pills-cont">
+              <div className="pills" id="pilla">
+                <h2>50k marketcap</h2>
+                <p>
                   {" "}
-                  I will add back 100% of the creator fees for every +200k
-                  increment
-                </span>
-              </p>
-            </div>
-            <div className="pills" id="pillb">
-              <h2>3M marketcap</h2>
-              <p>
-                <span>
-                  I launch a live pump.fun and open withdrawals for 2 days (I
-                  can't cheat, it's written in the smart contract).
-                </span>
-                <span>
-                  Those who have withdrawn their deposits during these 2 days
-                  will share 100% of the creator fees.
-                </span>
-                <span>
-                  The smart contract will then allow me to launch a second
-                  round, the market cap targets will be voted on Twitter{" "}
-                  <span
-                    onClick={() =>
-                      (window.location.href = "https://x.com/BreakThePill")
-                    }
-                    style={{ cursor: "pointer" }}
-                  >
+                  <span>
+                    I will permanently lock 100% of the pump.fun creator rewards
+                    as a creator by clicking on the "tip the pill" button.{" "}
+                  </span>
+                  <span>
+                    The only way for you (and me lol) to get this money back
+                    will be to lock ETH in this contract so that we can share
+                    these funds proportionally.
+                  </span>
+                  <span>
                     {" "}
-                    (@BreakThePill)
-                  </span>{" "}
-                </span>
-              </p>
+                    I will add back 100% of the creator fees for every +50k
+                    increment
+                  </span>
+                </p>
+              </div>
+              <div className="pills" id="pillb">
+                <h2>400K marketcap</h2>
+                <p>
+                  <span>
+                    Withdrawals will be activated, and we will have two days (48
+                    hours) to withdraw your ETH.
+                  </span>
+                  <span>
+                    Those who have withdrawn their deposits during these 2 days
+                    will share 100% of the creator fees.
+                  </span>
+                  <span>
+                    The smart contract will authorise the initiation of a second
+                    round, the market cap targets will be voted on Twitter{" "}
+                    <span
+                      onClick={() =>
+                        (window.location.href = "https://x.com/BreakThePill")
+                      }
+                      style={{ cursor: "pointer" }}
+                    >
+                      {" "}
+                      (@BreakThePill)
+                    </span>{" "}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -425,6 +427,7 @@ function App({
                 </button>
               </div>
 
+              {/* Withdraw */}
               {/* Withdraw */}
               <div className="card-btn">
                 <span className="spacer" />
