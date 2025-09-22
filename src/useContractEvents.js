@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ethers } from "ethers";
 import abi from "./abi.json";
 
-const CONTRACT_ADDRESS = "0xbf2CfD0c6b0A96e84ED1Ae5630BE0Fbdd1E2A763";
+const CONTRACT_ADDRESS = "0xcF19b0dfEE32b6e5B4FCe12A91949AbD98848f24";
 
 // WebSocket provider pour recevoir les events en live
 const provider = new ethers.WebSocketProvider("wss://arb1.arbitrum.io/ws");
