@@ -135,7 +135,7 @@
         .pills {
           border: 5px solid #14423d;
           padding: 20px;
-          height: 255px;
+          height: 230px;
           width: 60%;
           margin-left: 25%;
           text-align: center;
@@ -147,11 +147,13 @@
             font-family: "Fontdiner Swanky", serif;
             border-bottom: 1px solid black;
             margin-bottom: 5px;
+            margin-top: 0;
           }
           p {
             display: flex;
             flex-direction: column;
             font-size: 0.9rem;
+            margin: 0;
             span {
               margin-top: 10px;
             }
