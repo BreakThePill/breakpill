@@ -302,7 +302,7 @@ function App({
           className="break"
           onClick={() =>
             (window.location.href =
-              "https://pump.fun/coin/ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump")
+              "https://pump.fun/board")
           }
           style={{ cursor: "pointer" }}
         >
