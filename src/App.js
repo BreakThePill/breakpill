@@ -496,14 +496,14 @@ function App({
 
               <span>
                 <img src={eth} alt="eth-logo" />
+                <p>
+                  Want to check the <span>smart contract</span> ?
+                </p>
               </span>
 
               <div className="activity">
                 <Activity contractAddress={contractAddress} />
               </div>
-              <p>
-                Want to check the <span>smart contract</span> ?
-              </p>
               <span></span>
             </div>
           </div>
