@@ -426,7 +426,6 @@ function App({
               </div>
 
               {/* Withdraw */}
-              {/* Withdraw */}
               <div className="card-btn">
                 <span className="spacer" />
                 <button
