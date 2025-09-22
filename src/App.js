@@ -300,7 +300,10 @@ function App({
       <div className="top">
         <div
           className="break"
-          onClick={() => (window.location.href = "https://pump.fun/coin/ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump")}
+          onClick={() =>
+            (window.location.href =
+              "https://pump.fun/coin/ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump")
+          }
           style={{ cursor: "pointer" }}
         >
           <h2>Buy $break</h2>
@@ -485,7 +488,7 @@ function App({
               </span>
 
               <div className="activity">
-                <Activity />
+                <Activity contractAddress={contractAddress} />
               </div>
               <p>
                 Want to check the <span>smart contract</span> ?
