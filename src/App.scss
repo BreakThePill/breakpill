@@ -56,7 +56,7 @@
       }
 
       #logo {
-        height: 130px;
+        height: 100px;
         @media (max-width: 600px) {
           width: 80px;
           height: 80px;
@@ -97,13 +97,15 @@
         font-weight: bold;
         border: 0;
         padding: 5px 15px;
-        background: #9dcced;
-        border: 1px solid #9dcced;
+        background: rgba(119, 171, 139, 0.8117647059);
         height: 40px;
         border-radius: 10px;
         @media (max-width: 600px) {
           padding: 5px 5px;
           right: 3%;
+        }
+        @media (max-width: 446px) {
+          font-size: 0.6rem;
         }
 
         &:hover {
@@ -201,8 +203,6 @@
         }
       }
       .flex-btn {
-        margin-right: 5%;
-
         .btn-cont {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -317,7 +317,6 @@
             border-radius: 15px;
             height: 225px;
             background: #1e2736;
-            width: 100%;
             text-align: center;
             h1 {
               margin: 0;
