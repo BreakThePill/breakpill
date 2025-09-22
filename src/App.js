@@ -307,7 +307,7 @@ function App({
           style={{ cursor: "pointer" }}
         >
           <h2>Buy $break</h2>
-          <p>ByR2uqZ6HLHLpiuYVcrkMysgVpY6fhAYR3d58cuMpump</p>
+          <p>IciFaudraMettreLeContractDuTokenpump</p>
           <img id="mouse" src={mouse} alt="mouse" />
         </div>
         <div className="center">
