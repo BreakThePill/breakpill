@@ -4,14 +4,14 @@ import abi from "./abi.json";
 
 const CONTRACT_ADDRESS = "0xcF19b0dfEE32b6e5B4FCe12A91949AbD98848f24";
 
-// WebSocket provider pour recevoir les events en live
+
 const provider = new ethers.WebSocketProvider("wss://arb1.arbitrum.io/ws");
 
 function useContractEvents(onEvent) {
   useEffect(() => {
     const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, provider);
 
-    // Déposits
+
     contract.on("Deposited", (user, amount, event) => {
       onEvent({
         type: "Deposited",
@@ -21,7 +21,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Withdraw
+
     contract.on("Withdrawn", (user, amount, event) => {
       onEvent({
         type: "Withdrawn",
@@ -31,7 +31,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Claimed
+
     contract.on("Claimed", (user, amount, event) => {
       onEvent({
         type: "Claimed",
@@ -41,7 +41,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Donated
+
     contract.on("Donated", (from, amount, event) => {
       onEvent({
         type: "Donated",
@@ -51,7 +51,6 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Opened
     contract.on("Opened", (timestamp) => {
       onEvent({
         type: "Opened",
@@ -59,7 +58,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Closed
+
     contract.on("Closed", (poolSnapshot, totalWithdrawnSnapshot) => {
       onEvent({
         type: "Closed",
@@ -68,7 +67,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // Round reset
+
     contract.on("RoundReset", (recycled, roundId) => {
       onEvent({
         type: "RoundReset",
@@ -77,7 +76,7 @@ function useContractEvents(onEvent) {
       });
     });
 
-    // cleanup
+
     return () => {
       contract.removeAllListeners();
     };
