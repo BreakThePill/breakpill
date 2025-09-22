@@ -4,7 +4,7 @@ import abi from "./abi.json";
 import App from "./App";
 
 
-const CONTRACT_ADDRESS = "0xbf2CfD0c6b0A96e84ED1Ae5630BE0Fbdd1E2A763";
+const CONTRACT_ADDRESS = "0xcF19b0dfEE32b6e5B4FCe12A91949AbD98848f24";
 const ARB_HEX = "0xa4b1";
 const ARB_DEC = 42161n;
 
