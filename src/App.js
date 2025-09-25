@@ -16,7 +16,7 @@ function App({
   contract,
   contractAddress,
 }) {
-  // ---- States on-chain ----
+  // States on-chain
   const [balanceWei, setBalanceWei] = useState(null);
   const [withdrawIsOpen, setWithdrawIsOpen] = useState(false);
   const [redistributionPrepared, setRedistributionPrepared] = useState(false);
@@ -30,16 +30,16 @@ function App({
   const [pendingReward, setPendingReward] = useState("0");
   const [remainingTime, setRemainingTime] = useState(null);
 
-  // ---- UI inputs ----
+  // UI inputs
   const [depositAmount, setDepositAmount] = useState("");
   const [donationAmount, setDonationAmount] = useState("");
 
-  // ---- UI status ----
+  // UI status
   const [status, setStatus] = useState("");
 
   const iface = useMemo(() => new ethers.Interface(abi), []);
 
-  // ---- Actions ----
+  // Actions
   const requireWallet = async (fn) => {
     if (!signer || !contract) await connectWallet();
     if (signer && contract) await fn();
@@ -105,7 +105,7 @@ function App({
       }
     });
 
-  // ---- Polling ----
+  // Polling
   const loadLiveData = useCallback(async () => {
     try {
       const provider = new ethers.JsonRpcProvider(
@@ -187,7 +187,7 @@ function App({
     }
   }, [iface, contractAddress]);
 
-  // ---- User data ----
+  // User data
   const loadUserData = useCallback(async () => {
     if (!walletAddress) {
       setUserData(null);
@@ -245,7 +245,7 @@ function App({
     contractAddress,
   ]);
 
-  // ---- Countdown ----
+  // Countdown
   useEffect(() => {
     if (!withdrawsOpenedAt || !withdrawDuration) {
       setRemainingTime(null);
@@ -262,7 +262,7 @@ function App({
     return () => clearInterval(id);
   }, [withdrawsOpenedAt, withdrawDuration]);
 
-  // ---- Auto-refresh ----
+  // Auto-refresh
   useEffect(() => {
     loadLiveData();
     loadUserData();
@@ -273,7 +273,7 @@ function App({
     return () => clearInterval(id);
   }, [loadLiveData, loadUserData]);
 
-  // ---- Helpers ----
+  // Helpers
   const fmtTime = (secs) => {
     if (secs == null) return "—";
     const s = Math.max(0, Number(secs));
@@ -294,7 +294,7 @@ function App({
     (userData && userData.claimed) ||
     Number(pendingReward) === 0;
 
-  // ---- UI ----
+  // UI
   return (
     <div className="app-wrapper">
       <div className="top">
@@ -427,7 +427,6 @@ function App({
                 </button>
               </div>
 
-              {/* Withdraw */}
               {/* Withdraw */}
               <div className="card-btn">
                 <span className="spacer" />
