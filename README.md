@@ -31,5 +31,3 @@ src/Main.jsx — initializes provider, wallet connection, and contract instance
 src/App.jsx — main UI and contract interactions
 
 src/Activity.jsx — fetches and displays on-chain events
-
-public/favicon.ico — site icon
