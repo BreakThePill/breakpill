@@ -124,7 +124,7 @@
     .flex-app {
       display: flex;
       justify-content: space-around;
-      @media (max-width: 942px) {
+      @media (max-width: 1141px) {
         flex-direction: column-reverse;
       }
       .flex-pill {
@@ -135,10 +135,10 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 5%;
-        @media (max-width: 600px) {
+        @media (max-width: 1141px) {
           border: none;
           width: 80%;
-          margin: 0 10%;
+          margin: 20px 10% 0 10%;
         }
         .pills-cont {
           width: 12%;
@@ -180,6 +180,9 @@
           background: #1e2736;
           color: aliceblue;
           border-radius: 15px;
+          @media (max-width: 1141px) {
+            margin-top: 20px;
+          }
         }
       }
       .flex-btn {
