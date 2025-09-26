@@ -190,7 +190,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
 
-          @media (max-width: 600px) {
+          @media (max-width: 767px) {
             display: flex;
             flex-direction: column;
           }
