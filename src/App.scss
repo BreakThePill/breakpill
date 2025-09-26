@@ -124,83 +124,62 @@
     .flex-app {
       display: flex;
       justify-content: space-around;
-      @media (max-width: 600px) {
+      @media (max-width: 942px) {
         flex-direction: column-reverse;
       }
       .flex-pill {
         color: #0000008f;
         width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 5%;
         @media (max-width: 600px) {
           border: none;
-          width: 90%;
+          width: 80%;
+          margin: 0 10%;
         }
-
-        .pills {
-          border: 5px solid #14423d;
-          padding: 20px;
-          height: 230px;
-          width: 60%;
-          margin-left: 25%;
-          text-align: center;
-          @media (max-width: 600px) {
-            margin-left: 25%;
-            width: 50%;
-          }
-          h2 {
-            font-family: "Fontdiner Swanky", serif;
-            border-bottom: 1px solid black;
-            margin-bottom: 5px;
-            margin-top: 0;
-            width: 70%;
-            transform: translateX(-50%);
-            margin-left: 50%;
-          }
-          p {
-            display: flex;
-            flex-direction: column;
-            font-size: 0.9rem;
-            margin: 0;
-            span {
-              margin-top: 10px;
-            }
-            @media (max-width: 1189px) {
-              font-size: 0.7rem;
-            }
+        .pills-cont {
+          width: 12%;
+          .pills {
+            border: 5px solid #14423d;
+            padding: 20px;
+            height: 50px;
+            width: 100%;
             @media (max-width: 600px) {
-              font-size: 0.67rem;
+              margin-left: 25%;
+              height: 40px;
             }
           }
+          #pilla {
+            position: relative;
+            z-index: 10;
+            rotate: -3deg;
+            background: #ebebeb;
+            box-shadow: 15px white;
+            border-radius: 50% 50% 10px 10px;
+            top: 5px;
 
-          span {
-            font-weight: bold;
+            @media (max-width: 600px) {
+              width: 53%;
+            }
+          }
+          #pillb {
+            rotate: 3deg;
+            background: #4ca472;
+            box-shadow: 15px #4ca472;
+            border-radius: 10px 10px 50% 50%;
+            @media (max-width: 600px) {
+              width: 50%;
+            }
           }
         }
-        #pilla {
-          position: relative;
-          z-index: 10;
-          rotate: -3deg;
-          background: #ebebeb;
-          box-shadow: -5px -10px 45px white;
-          border-radius: 50% 50% 10px 10px;
-          top: 10px;
-          width: 62%;
-          @media (max-width: 600px) {
-            width: 53%;
-            height: 280px;
-          }
-        }
-        #pillb {
-          background-size: cover;
-          rotate: 3deg;
-          background: #4ca472;
-          box-shadow: 5px 10px 45px #4ca472;
-          margin-left: 27%;
-          border-radius: 10px 10px 50% 50%;
-          @media (max-width: 600px) {
-            width: 50%;
-            height: 280px;
-            margin-left: 27%;
-          }
+        .text {
+          padding: 10px;
+          background: #1e2736;
+          color: aliceblue;
+          border-radius: 15px;
         }
       }
       .flex-btn {
@@ -380,14 +359,14 @@
     transform: rotate(0deg);
   }
   10% {
-    transform: rotate(-1deg);
+    transform: rotate(-3deg);
   }
   20% {
     transform: rotate(0deg);
   }
   70% {
     transform: rotate(0deg);
-    box-shadow: -5px -10px 25px white;
+    box-shadow: -5px -2px 15px white;
   }
 }
 
@@ -396,14 +375,14 @@
     transform: rotate(0deg);
   }
   10% {
-    transform: rotate(1deg);
+    transform: rotate(10deg);
   }
   20% {
     transform: rotate(0deg);
   }
   70% {
     transform: rotate(0deg);
-    box-shadow: 5px 10px 25px #4ca472;
+    box-shadow: 5px 2px 15px #4ca472;
   }
 }
 #pilla {
