@@ -16,7 +16,7 @@ function App({
   contract,
   contractAddress,
 }) {
-  // States on-chain
+  // ---- States on-chain ----
   const [balanceWei, setBalanceWei] = useState(null);
   const [withdrawIsOpen, setWithdrawIsOpen] = useState(false);
   const [redistributionPrepared, setRedistributionPrepared] = useState(false);
@@ -30,16 +30,16 @@ function App({
   const [pendingReward, setPendingReward] = useState("0");
   const [remainingTime, setRemainingTime] = useState(null);
 
-  // UI inputs
+  // ---- UI inputs ----
   const [depositAmount, setDepositAmount] = useState("");
   const [donationAmount, setDonationAmount] = useState("");
 
-  // UI status
+  // ---- UI status ----
   const [status, setStatus] = useState("");
 
   const iface = useMemo(() => new ethers.Interface(abi), []);
 
-  // Actions
+  // ---- Actions ----
   const requireWallet = async (fn) => {
     if (!signer || !contract) await connectWallet();
     if (signer && contract) await fn();
@@ -105,7 +105,7 @@ function App({
       }
     });
 
-  // Polling
+  // ---- Polling ----
   const loadLiveData = useCallback(async () => {
     try {
       const provider = new ethers.JsonRpcProvider(
@@ -187,7 +187,7 @@ function App({
     }
   }, [iface, contractAddress]);
 
-  // User data
+  // ---- User data ----
   const loadUserData = useCallback(async () => {
     if (!walletAddress) {
       setUserData(null);
@@ -245,7 +245,7 @@ function App({
     contractAddress,
   ]);
 
-  // Countdown
+  // ---- Countdown ----
   useEffect(() => {
     if (!withdrawsOpenedAt || !withdrawDuration) {
       setRemainingTime(null);
@@ -262,7 +262,7 @@ function App({
     return () => clearInterval(id);
   }, [withdrawsOpenedAt, withdrawDuration]);
 
-  // Auto-refresh
+  // ---- Auto-refresh ----
   useEffect(() => {
     loadLiveData();
     loadUserData();
@@ -273,7 +273,7 @@ function App({
     return () => clearInterval(id);
   }, [loadLiveData, loadUserData]);
 
-  // Helpers
+  // ---- Helpers ----
   const fmtTime = (secs) => {
     if (secs == null) return "—";
     const s = Math.max(0, Number(secs));
@@ -294,7 +294,7 @@ function App({
     (userData && userData.claimed) ||
     Number(pendingReward) === 0;
 
-  // UI
+  // ---- UI ----
   return (
     <div className="app-wrapper">
       <div className="top">
@@ -336,27 +336,30 @@ function App({
         <div className="flex-app">
           <div className="flex-pill">
             <div className="pills-cont">
-              <div className="pills" id="pilla">
-                <h2>50k marketcap</h2>
-                <p>
+              <div className="pills" id="pilla"></div>
+              <div className="pills" id="pillb"></div>
+            </div>
+            <div className="text">
+              <h2>50k marketcap</h2>
+              <p>
+                {" "}
+                <span>
+                  I will permanently lock 100% of the pump.fun creator rewards
+                  as a creator by clicking on the "tip the pill" button.{" "}
+                </span>
+                <span>
+                  The only way for you (and me lol) to get this money back will
+                  be to lock ETH in this contract so that we can share these
+                  funds proportionally.
+                </span>
+                <span>
                   {" "}
-                  <span>
-                    I will permanently lock 100% of the pump.fun creator rewards
-                    as a creator by clicking on the "tip the pill" button.{" "}
-                  </span>
-                  <span>
-                    The only way for you (and me lol) to get this money back
-                    will be to lock ETH in this contract so that we can share
-                    these funds proportionally.
-                  </span>
-                  <span>
-                    {" "}
-                    I will add back 100% of the creator fees for every +50k
-                    increment
-                  </span>
-                </p>
-              </div>
-              <div className="pills" id="pillb">
+                  I will add back 100% of the creator fees for every +50k
+                  increment
+                </span>
+              </p>
+
+              <div>
                 <h2>400K marketcap</h2>
                 <p>
                   <span>
@@ -427,6 +430,7 @@ function App({
                 </button>
               </div>
 
+              {/* Withdraw */}
               {/* Withdraw */}
               <div className="card-btn">
                 <span className="spacer" />
