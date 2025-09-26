@@ -499,7 +499,7 @@ function App({
                 </h2>
               </div>
 
-              <span>
+              <span className="eth-cont">
                 <img src={eth} alt="eth-logo" />
                 <p>
                   Want to check the <span>smart contract</span> ?
