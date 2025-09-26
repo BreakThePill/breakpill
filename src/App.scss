@@ -268,8 +268,10 @@
               margin-left: 5%;
             }
           }
-          span {
+          .eth-cont {
+            position: relative;
             img {
+              position: absolute;
               height: 200px;
               width: 60%;
               margin: 5px 20%;
@@ -285,7 +287,7 @@
             }
             p {
               text-align: center;
-              margin: 0;
+              margin-top: 210px;
               color: #5fc98d;
               span {
                 text-decoration: underline;
